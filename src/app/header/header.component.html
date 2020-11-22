@@ -1,0 +1,29 @@
+<div class="container-fluid" style="
+height: 25vh;
+
+background-color: rgb(238, 238, 238);
+">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h1 style="font-size: 5rem; padding-top: 50px;">
+                    {{ title }}
+                </h1>
+                <span class="lead">{{ subtitle }}</span>
+            </div>
+            <div class="col text-right">
+                <button *ngIf="button === 'logout'" type="button" style="margin-top: 30px;" class="btn btn-danger"
+                    (click)='onLogout()'>
+                    logout
+                </button>
+                <button *ngIf="button === 'view-cart'" type="button" style="margin-top: 30px;" class="btn btn-light"
+                    routerLink="/cart">
+                    <i class="fas fa-shoppingcart" style="transform: rotateY(180deg) !important;"></i>
+                    view cart
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
